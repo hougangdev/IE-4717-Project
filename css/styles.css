@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: #6f1a07;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 56.4px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding-right: 100px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.cart-dropdown-button-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Align to the right side within the container */
+}
+
+/* Cart button styles to match the theme */
+#cart-button {
+    margin-left: 40px;
+    background-color: #fff; /* Contrast with the header */
+    color: #6f1a07; /* To match the header background */
+    padding: 10px 20px;
+    border: 1px solid #6f1a07; /* Add a border to define the button */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Times New Roman', serif;
+    font-weight: bold   ;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#cart-button:hover {
+    background-color: #6f1a07; /* Header background color for the hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Style for the checkout button inside the cart dropdown to match the theme */
+#checkout-button {
+    margin-left: 20px;
+    align-self: center;
+    background-color: #6f1a07; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: block; /* Make it a block element to occupy full width */
+    margin: 10px 40px; /* Add some margin on the top and bottom */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#checkout-button:hover {
+    background-color: #fff; /* White background for the hover */
+    color: #6f1a07; /* Theme primary color for the text */
+    border: 1px solid #6f1a07; /* Add border to maintain dimension */
+}
+
+#clear-cart-button {
+    width: 96.31px;
+    margin-left: 20px;
+    align-self: center;
+    background-color: #000000; /* Consistent with the theme's primary color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: block; /* Make it a block element to occupy full width */
+    margin: 10px 40px; /* Add some margin on the top and bottom */
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#clear-cart-button:hover {
+    background-color: #fff; /* White background for the hover */
+    color: #6f1a07; /* Theme primary color for the text */
+    border: 1px solid #6f1a07; /* Add border to maintain dimension */
+}
+
+/* Additional styles for the cart dropdown */
+.cart-dropdown-content {
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0; /* Align to the right side within the container */
+    border-radius: 5px; /* Slightly rounded corners for the dropdown */
+}
+
+.cart-dropdown-content h2 {
+    color: #6f1a07; /* Theme primary color */
+    padding: 10px 20px;
+    border-bottom: 1px solid #6f1a07; /* Separator */
+}
+
+#cart-display {
+    padding: 10px 20px;
+    color: #6f1a07; /* Text color for items */
+}
+
+#cart-total {
+    font-weight: bold;
+}
+
+.shopping-cart p {
+    align-self: center;
+    margin-left: 20px;
+}
+
+
+
+/* ------------ */
+/* HOME */
+/* Hero Section */
+
+.hero {
+    height: 600px;
+    width: 100%;
+    margin-top: 104px;
+    background-image: url('../media/herosection.jpg');
+    background-position: top;
+    background-size: cover;
+    color:#fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* styles within the hero section */
+
+.hero h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    z-index: 1;
+}
+
+.hero p {
+    font-size: 18px;
+    z-index: 1;
+}
+
+.hero button {
+    font-size: 18px; 
+    padding: 12px 25px; /* larger padding makes the button more prominent */
+    background-color: #6f1a07; /* a bright, attention-grabbing color */
+    color: #fff; /* white text to contrast with the button's background color */
+    border: none; /* removes the default browser styling on buttons */
+    border-radius: 5px; /* slightly rounded corners for a modern look */
+    cursor: pointer; /* indicates an action can be taken */
+    transition: background-color 0.3s ease; /* smooth background color change */
+    z-index: 1; /* keeps the button above the background image */
+    
+}
+
+.hero button:hover {
+    background-color: #e74c3c; /* slightly darker shade for a subtle "hover" effect */
+}
+
+
+.gallery {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    overflow: hidden; /* Hide the images out of the container */
+    white-space: nowrap; /* Prevent images from stacking */
+    background-color: whitesmoke;
+}
+
+.gallery-item {
+    display: inline-block;
+    width: 33.33%; 
+    height: 100%;
+    position: relative; /* Prepare for child absolute positioning */
+    cursor: pointer; /* Indicate clickable item */
+    transition: transform 0.5s ease; /* Smooth transformation */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Enlarge image on hover */
+    z-index: 2; /* Make it above others when enlarged */
+}
+
+.gallery img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(90%);
+}
+
+#typedText {
+    font-size: 24px; 
+    color: white; 
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black; /* Simulates the cursor of a text editor */
+}
+
+.foodText {
+    font-size: 24px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    justify-content: center; /* Center the items vertically */
+    align-items: center; /* Center the items horizontally */
+    height: 100vh; /* Full height of the viewport */
+    gap: 20px; /* Space between items */
+    padding: 20px; 
+}
+
+.typing-container {
+    display: flex; /* ensures inline layout */
+    align-items: baseline; /* adjust as per design requirement */
+}
+
+.typing-container span {
+    margin-right: 5px;
+    font-size: 24px; 
+}
+
+
+/* END of HOME*/
+
+/* ------ */
+/* LOGIN */
+
+.login-container {
+    margin-top: 116.8px;
+    width: 100%;
+    height: 90vh;
+    background: url('../media/herosection.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background: rgba(255, 255, 255, 0.4);  /* Translucent white background */
+    border-radius: 10px;
+    padding: 30px 40px;
+    width: 300px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-card h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 10px;
+    background-color: #6f1a07;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-card button:hover {
+    color: black;
+    background-color: white;
+}
+/* END of LOGIN */
+
+/* ---------- */
+/* MULTI MENU */
+.multimenu--container {
+    margin-top: 116.8px;
+    height: 90vh;
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: center;
+}
+
+.multimenu--card {
+    width: 250px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.multimenu--card img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.multimenu--card p {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.multimenu--card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    cursor: pointer; /* item is clickable */
+    transform: scale(1.05); /* to slightly increase the size of the card on hover */
+    transition: all 0.3s ease-in-out; /* for smooth effect */
+}
+
+.card-link {
+    text-decoration: none; /* to remove any default underline styles on the 'a' tag */
+    color: inherit; /* to ensure text color does not change */
+}
+/* END of MULTI MENU */
+
+
+/* ------------------- */
+/* Menu Section and Cards */
+
+.menu-section {
+    padding: 50px 0;
+    background: #f8f8f8;
+}
+
+.menu-title {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+.menu-container {
+    margin-top: 116.8px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Adjusts space between cards */
+    padding: 0 10%; /* Adjusts padding around the layout */
+}
+
+.menu-card {
+    background: #ffffff;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Drop shadow effect */
+    overflow: hidden; /* Ensures nothing spills outside the rounded corners */
+    width: calc((100% - 60px) / 3); 
+    padding-bottom: 30px;
+    transition: transform 0.3s ease-in-out; /* Creates a smooth animation on hover */
+}
+
+.menu-image {
+    width: 100%;
+    height: 200px; /* Fixed height, but consider making this responsive */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.menu-product-title {
+    color: #333;
+    font-size: 1.5em;
+    margin: 20px 0 10px;
+    padding: 0 20px; /* Adds some side padding */
+}
+
+.menu-product-description {
+    color: #666;
+    padding: 0 20px;
+    font-size: 0.875em;
+}
+
+.menu-product-price {
+    color: #daa520; /* Golden color for price */
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 0 20px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.quantity-decrease, .quantity-increase {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.quantity {
+    padding: 5px 10px;
+}
+
+.checkout-button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* styles.css */
+.checkout-button {
+    background-color: #4CAF50; /* A nice shade of green */
+    color: white; /* Text color */
+    padding: 12px 24px; /* Some padding */
+    border: none; /* Remove borders */
+    border-radius: 4px; /* Slightly rounded corners */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; /* Adjust font-size here */
+    margin: 4px 2px; /* Slightly separate from other elements */
+    transition-duration: 0.4s; /* Makes any changes in state take 0.4s */
+    cursor: pointer; /* Cursor that indicates a clickable area */
+    transition: box-shadow 0.4s, transform 0.2s;
+}
+
+.checkout-button:hover {
+    background-color: white; /* White background on hover */
+    color: #4CAF50; /* Green text on hover */
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); /* Slight shadow effect */
+}
+
+.checkout-button:active {
+    /* "Press" effect on active state */
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 10px 25px 0 rgba(0,0,0,0.19);
+    transform: translateY(4px); /* The button moves down slightly */
+}
+
+
+
+
+
+
+/* ---------------- */
+/* ABOUT US */
+.about-us-container {
+    margin-top: 116.8px;
+    height: 90vh;
+    display: flex;
+    align-items: center; /* centers the card vertically */
+    justify-content: center; /* centers the card horizontally */
+    background-color: #f5f5f5; /* optional: adds a light background */
+}
+
+.about-us-card {
+    display: flex;
+    gap: 20px; /* spacing between image and content */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-image img {
+    max-width: 300px; 
+    border-radius: 5px;
+}
+
+.about-us-content {
+    flex: 1;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.about-us-info {
+    margin-top: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.location-icon::before {
+    content: '📍';
+    font-size: 16px;
+}
+
+.phone-icon::before {
+    content: '📞';
+    font-size: 16px;
+}
+
+.email-icon::before {
+    content: '✉️';
+    font-size: 16px;
+}
+
+/* END of ABOUT US */
+
+/* ------ */
+/* FOOTER */
+.footer {
+    height: auto;
+    width: 100%;
+    margin: auto;
+    color: #fff;
+    background-color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+/* END of FOOTER */
+
+/* Register Error Bar*/
+.error {
+	color: #ff0000;
+	font-size: 50%;
+}
