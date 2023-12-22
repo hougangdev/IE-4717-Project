@@ -7,6 +7,8 @@ Module IE-4717. The Haochi project is a food ordering platform build using HTML,
   <a href="#team">Team</a> •
 </p>
 
+![Haochi Home Page](https://github.com/hougangdev/IE-4717-Project/blob/main/haochihomepage.png)
+
 ## Setup
 
 1) Install Xampp, Thunderbird.
